@@ -1,0 +1,8 @@
+# node 模块
+node_modules/
+
+# MAC
+.DS_Store
+
+# cache
+docs/.vuepress/cache/
