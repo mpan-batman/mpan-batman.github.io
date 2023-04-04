@@ -58,7 +58,7 @@
 | 事件名称         | 说明                     | 回调参数             |
 | ---------------- | ------------------------ | -------------------- |
 | handleComfirm    | 处理 Dialog 确定按钮回调 | Object: 目前选中的值 |
-| handleShowDialog | 点击 handle              | -                    |
+| handleShowDialog | 点击 handle              | some value           |
 
 ## Slots
 
