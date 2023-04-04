@@ -30,7 +30,4 @@ jobs:
           path: docs/.vuepress/dist
       - name: Deploy
         id: deployment
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/.vuepress/dist
+        uses: actions/deploy-pages@v1
