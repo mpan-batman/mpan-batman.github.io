@@ -2,7 +2,7 @@
 home: true
 heroImage: /assets/logo.png
 actions:
-  - text: 快速上手
+  - text: 写作指南
     link: /guide/
     type: primary
     size: large
