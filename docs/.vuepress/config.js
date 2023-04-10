@@ -1,8 +1,8 @@
 const path = require('path')
 
 module.exports = {
-  title: 'Melody SAAS组件库',
-  description: 'Melody SAAS组件库文档',
+  title: 'Melody 组件库',
+  description: 'Melody 组件库文档',
   theme: 'antdocs',
   plugins: ['demo-container'],
   themeConfig: {
@@ -60,13 +60,17 @@ module.exports = {
       }
     ],
     sidebar: [
-      '/',
-      ['/guide/', '侧边栏标题'],
       {
-        title: '医生库组件库',
+        title: '医生库',
         path: '/doctor/',
         collapsable: false,
-        children: [['/doctor/select-with-dialog/', '带弹窗选择器']]
+        children: [['/doctor/select-with-dialog/', 'SelectWithDialog 带弹窗选择器']]
+      },
+      {
+        title: '公共组件',
+        path: '/common/',
+        collapsable: false,
+        children: [['/common/tooltip/', 'Tooltip 文字提示']]
       }
     ]
   },
@@ -76,5 +80,6 @@ module.exports = {
         '@alias': path.resolve(__dirname, 'public/assets/images')
       }
     }
-  }
+  },
+  evergreen: true
 }

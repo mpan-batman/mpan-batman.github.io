@@ -8,6 +8,10 @@
 
 ## 预览
 
+```bash
+/some/dir/used/this/component/index.vue
+```
+
 ![Image from alias](~@alias/select-with-dialog.gif)
 
 ## 使用
