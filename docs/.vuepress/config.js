@@ -80,6 +80,5 @@ module.exports = {
         '@alias': path.resolve(__dirname, 'public/assets/images')
       }
     }
-  },
-  evergreen: true
+  }
 }
