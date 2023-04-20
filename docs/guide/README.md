@@ -20,27 +20,21 @@
 
 ```html
 <template>
-  <el-select v-model="value" placeholder="请选择">
-    <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
-    </el-option>
-  </el-select>
+  <melody-button type="primary" size="small" @click="showDialog = true">显示Dialog</melody-button>
+  <melody-dialog title="提示" :visible="showDialog" width="300">
+    <span>这是一段信息</span>
+    <span slot="footer" class="dialog-footer">
+      <melody-button size="small" @click="showDialog = false">取 消</melody-button>
+      <melody-button type="primary" size="small" @click="showDialog = false">确 定</melody-button>
+    </span>
+  </melody-dialog>
 </template>
 
 <script>
   export default {
     data() {
       return {
-        options: [
-          {
-            value: '选项1',
-            label: '黄金糕'
-          },
-          {
-            value: '选项2',
-            label: '双皮奶'
-          }
-        ],
-        value: ''
+        showDialog: false
       }
     }
   }
