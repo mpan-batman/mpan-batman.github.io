@@ -20,14 +20,16 @@
 
 ```html
 <template>
-  <melody-button type="primary" size="small" @click="showDialog = true">显示Dialog</melody-button>
-  <melody-dialog title="提示" :visible="showDialog" width="300">
-    <span>这是一段信息</span>
-    <span slot="footer" class="dialog-footer">
-      <melody-button size="small" @click="showDialog = false">取 消</melody-button>
-      <melody-button type="primary" size="small" @click="showDialog = false">确 定</melody-button>
-    </span>
-  </melody-dialog>
+  <div class="demo">
+    <melody-button type="primary" size="small" @click="showDialog = true">显示Dialog</melody-button>
+    <melody-dialog title="提示" :visible="showDialog" width="300">
+      <span>这是一段信息</span>
+      <span slot="footer" class="dialog-footer">
+        <melody-button size="small" @click="showDialog = false">取 消</melody-button>
+        <melody-button type="primary" size="small" @click="showDialog = false">确 定</melody-button>
+      </span>
+    </melody-dialog>
+  </div>
 </template>
 
 <script>
