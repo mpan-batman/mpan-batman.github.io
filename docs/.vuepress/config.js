@@ -9,7 +9,7 @@ module.exports = {
     sidebarDepth: 0,
     nav: [
       {
-        text: '指南',
+        text: '写作指南',
         link: '/guide/'
       },
       {
@@ -17,49 +17,38 @@ module.exports = {
         ariaLabel: 'Language Menu',
         items: [
           {
-            text: '分组',
+            text: '资源',
             items: [
               {
-                text: '分组1',
-                link: 'https://github.com/ElementUI/babel-plugin-component',
+                text: 'element文档',
+                link: 'https://element.eleme.io/#/zh-CN',
                 target: '_blank'
               },
               {
-                text: '分组2',
-                link: 'https://github.com/ElementUI/babel-plugin-component',
+                text: '文档主题',
+                link: 'https://antdocs.js.org/',
                 target: '_blank'
               }
             ]
           },
           {
-            text: '另外一个分组',
+            text: '帮助',
             items: [
               {
-                text: '分组1',
-                link: 'https://github.com/ElementUI/babel-plugin-component',
-                target: '_blank'
-              },
-              {
-                text: '分组2',
-                link: 'https://github.com/ElementUI/babel-plugin-component',
-                target: '_blank'
+                text: '文档写作模板',
+                link: '/example/'
               }
             ]
-          },
-          {
-            text: 'Github',
-            link: 'https://github.com/ElementUI/babel-plugin-component',
-            target: '_blank'
-          },
-          {
-            text: 'Preview',
-            link: 'https://github.com/ElementUI/babel-plugin-component',
-            target: '_blank'
           }
         ]
       }
     ],
     sidebar: [
+      {
+        title: '安装',
+        path: '/quick-start/',
+        collapsable: false
+      },
       {
         title: '医生库',
         path: '/doctor/',
@@ -70,7 +59,7 @@ module.exports = {
         title: '公共组件',
         path: '/common/',
         collapsable: false,
-        children: [['/common/tooltip/', 'Tooltip 文字提示']]
+        children: [['/common/dialog/', 'Dialog 对话框']]
       }
     ]
   },

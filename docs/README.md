@@ -1,37 +1,60 @@
 ---
 home: true
-heroImage: /assets/logo.png
+tagline: null
 actions:
   - text: 写作指南
     link: /guide/
     type: primary
     size: large
-  - text: 在线演示
-    link: https://codesandbox.io/s/zpfz-antdocs-document-0jzb8r
+  - text: 安装
+    link: /quick-start/
     type: primary
     ghost: true
     size: large
 features:
-  - title: Less 预处理器
-    details: 从 Stylus 样式过渡到 Less 样式，统一使用预处理器，让 node_modules 不再过度臃肿。
-  - title: Ant Design 风格
-    details: 主题搭载 Ant Design of Vue 组件，支持 Markdown 语法与 Ant Design 组件混用。
-  - title: 各种功能优化
-    details: 新增底部栏目设置，优化行内代码、代码块以及其他各种显示效果和动画，真正实现风格迁移。
+  - title: 为什么要有文档？
+    details: 没有组件库说明文档，一方面组件的相关API, Attributes都不清楚，其他人复用需要问开发组件的人。另外一方面规范组件开发风格。
+  - title: 做了什么？
+    details: 1. 二次封装element-ui, 自定义一些样式，修复element-ui的一些bug。2. 封装一些业务组件，给出具体使用的位置和使用效果。
+  - title: 不足
+    details: 大量待完善内容，开发标准完善，内容完善，组件库完善，组件性能优化
 footerWrap:
-  - headline: 🌿生态系统
+  - headline: 生态系统
     items:
-      - title: AntDocs
-        link: https://github.com/zpfz/vuepress-theme-antdocs/
-        details: VuePress 主题
-      - title: VuePress-Creator
-        link: https://zpfz.github.io/vuepress-creator/
-        details: VuePress CLI
-  - headline: ⚓资源链接
+      - title: ElementUi
+        link: https://element.eleme.io/#/zh-CN/
+        details: Element 文档
+      - title: Vue2
+        link: https://v2.cn.vuejs.org/
+        details: Vue2文档
+  - headline: 资源链接
     items:
-      - title: VuePress
-        link: https://vuepress.vuejs.org/zh/
-      - title: Ant Design Vue 1.x
-        link: https://1x.antdv.com/docs/vue/introduce-cn/
-footer: MIT Licensed | Copyright © 2020-present Feng L.H.
+      - title: 代码规范
+        link: https://msh-frontend.yuque.com/org-wiki-msh-frontend-oykvbf/vogdow/cy2a630uygw0kb0w
+      - title: Code Review 规范
+        link: https://msh-frontend.yuque.com/org-wiki-msh-frontend-oykvbf/vogdow/dxf62e7dn0hmbix4
+footer: MIT Licensed | Copyright © 2020-present MelodyUI
 ---
+
+## 已接入项目
+
+<p></p> 
+<!-- 必须要有个空行p标签 -->
+<el-row>
+  <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
+    <el-card :body-style="{ padding: '0px' }">
+      <!-- <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" :style="{width: '100%'}"> -->
+      <div :style="{
+        padding: '14px',
+        backgroundImage: 'url(https://cdn.pixabay.com/photo/2023/04/16/09/54/bird-7929733_1280.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }">
+        <span>某个使用了此组件的项目</span>
+        <div class="bottom clearfix">
+          <el-button type="text" class="button">去看看</el-button>
+        </div>
+      </div>
+    </el-card>
+  </el-col>
+</el-row>

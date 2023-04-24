@@ -1,74 +1,57 @@
-# 文档写作模版
+# 组件文档写作规范
 
-> 带弹窗选择框，可以远程搜索，也可以在弹窗里面更加精细的搜索。
+> 规范分三部分，业务组件和公共组件在抽象程度上有一定差别，各自有特殊处理。
 
-## 开发背景
+参考[写作指南](https://mpan-batman.github.io/guide/)
 
-表单中一些字段选择比较复杂，选择的对象要显示的字段较多，例如医疗服务商的选择，既需要知道医疗服务商的名称，还需要看到医疗服务商签约状态，医院等级，医院属性等信息，如果用传统的 select 模糊搜索一方面不方便精确查找，另外一方面不好显示医院等级等信息。为了解决以上问题，业务上封装了 element select/dialog, 在 dialog 里面做精确的搜索和详细的信息展示。
+- [通用规范](#通用规范)
+- [业务组件规范](#业务组件规范)
+- [公共组件规范](#公共组件规范)
 
-## 预览
+## 通用规范
 
-```bash
-/some/dir/used/this/component/index.vue
-```
+### 组件名
 
-![Image from alias](~@alias/select-with-dialog.gif)
+组件名要简单，方便内部沟通。用一句简短的话描述，组件是干什么的。
 
-## 使用
+### 开发背景
 
-::: demo 适用广泛的基础单选
+详细说明为什么开发这个组件，组件解决了什么问题
 
-```html
-<template>
-  <div class="block">
-    <ClientOnly>
-      <melody-button type="primary" size="small" @click="showDialog = true"
-        >显示Dialog</melody-button
-      >
-      <melody-dialog title="提示" :visible="showDialog" width="300">
-        <span>这是一段信息</span>
-        <span slot="footer" class="dialog-footer">
-          <melody-button size="small" @click="showDialog = false">取 消</melody-button>
-          <melody-button type="primary" size="small" @click="showDialog = false"
-            >确 定</melody-button
-          >
-        </span>
-      </melody-dialog>
-    </ClientOnly>
-  </div>
-</template>
+### 预览(业务组件)
 
-<script>
-  export default {
-    data() {
-      return {
-        showDialog: false
-      }
-    }
-  }
-</script>
-```
+> 业务代码一般会涉及到大量业务逻辑和组件，不需要放实际的可以执行的 demo，放一张预览的 gif 图就可以了, 以及在实际业务的位置
 
-:::
+### 使用(公共组件)
 
-## Attributes
+> 公共组件需要提供可执行的 demo
 
-| 参数         | 说明                              | 类型   | 默认值 |
-| ------------ | --------------------------------- | ------ | ------ |
-| option-value | select 中 option value 的映射属性 | string | value  |
-| option-label | select 中 option label 的映射属性 | string | label  |
-| title        | Dialog 的 title                   | string | -      |
+### Attributes
 
-## Events
+| 参数   | 说明             | 类型         | 默认值     |
+| ------ | ---------------- | ------------ | ---------- |
+| 参数名 | 说明参数是干啥的 | 参数数据类型 | 参数默认值 |
 
-| 事件名称         | 说明                     | 回调参数             |
-| ---------------- | ------------------------ | -------------------- |
-| handleComfirm    | 处理 Dialog 确定按钮回调 | Object: 目前选中的值 |
-| handleShowDialog | 点击 handle              | some value           |
+### Events
 
-## Slots
+| 事件名称 | 说明           | 回调参数 |
+| -------- | -------------- | -------- |
+| 事件名称 | 说明事件是功能 | 回调参数 |
 
-| 名称   | 说明                        |
-| ------ | --------------------------- |
-| option | select 组件下 option 的内容 |
-| table  | Dialog 中 table 的内容      |
+### Slots
+
+| 名称    | 说明             |
+| ------- | ---------------- |
+| slot 名 | 说明 slot 的作用 |
+
+## 业务组件规范
+
+### 预览
+
+给出组件使用的 gif 图片
+
+## 公共组件规范
+
+### 使用
+
+给出组件使用的 demo
