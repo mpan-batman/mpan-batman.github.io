@@ -59,7 +59,10 @@ module.exports = {
         title: '公共组件',
         path: '/common/',
         collapsable: false,
-        children: [['/common/dialog/', 'Dialog 对话框']]
+        children: [
+          ['/common/dialog/', 'Dialog 对话框'],
+          ['/common/description-item/', 'Description 描述列表']
+        ]
       }
     ]
   },
